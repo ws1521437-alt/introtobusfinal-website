@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" href="https://i.imgur.com/HP1NKSd.png">
+<head>
+    <meta charset="UTF-8">
+    <title>SilverLining Airlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0; 
+            font-family: 'Comic Neue', sans-serif; 
+            background-color: #01796f; 
+            color: #c0c0c0; 
+        }
+        .banner {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            height: 320px;
+            box-sizing: border-box;
+            color: rgb(164, 28, 198);
+            overflow: hidden;
+        }
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 128, 0.7);
+            z-index: 0; 
+        }
+        
+        .banner-background {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://meetmtp.com/wp-content/uploads/2022/03/cover_photo-38.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; 
+        }
+        .banner-left,
+        .banner-center,
+        .banner-right {
+            position: relative;
+            z-index: 2;
+        }
+        .banner-left img {
+            width: 150px;
+            height: auto;
+            max-width: 100%;
+            background-color: #c0c0c0;
+            z-index: 1;
+            position: relative;
+            display: block;
+            object-fit: contain;
+        }
+        .banner-left a {
+            pointer-events: none;
+            cursor: default;
+        }
+        .banner-center h1 {
+            font-size: 102px;
+            text-align: center;
+            margin: 0;
+            z-index: 1;
+        }
+        .banner-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            align-items: flex-end;
+            z-index: 1;
+        }
+        .book-now {
+            background-color: #2a9dca; 
+            color: silver;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .secondary-buttons {
+            margin-top: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .secondary-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: silver;
+            color: #01796f;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px 0; 
+            width: 120px; 
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        /* Main Page */
+        .content {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+        .box {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            min-width: 250px;
+            flex: 1;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+        }
+        .promise {
+            background-color: #004d40; 
+            color: silver;
+        }
+        .who-we-serve {
+            background-color: #90ee90; 
+            color: #000000;
+        }
+        .service-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .service-section .box {
+            max-width: 900px;
+            width: 100%;
+            margin: 10px 0;
+            background-color: #29c38a;
+            color: rgb(18, 17, 17);
+            text-align: center;
+        .service-section .box.service-image {
+            background-color: transparent;
+            border: 3px solid #000000;
+            border-radius: 8px;
+            padding: 18px;
+        }
+        .service-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        .service-section .box.service-image img {
+            width: calc(100% - 36px);
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+        }
+        .prices-section {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .prices-banner {
+            background-color: #E6E6FA;
+            color: #000000;
+            padding: 8px 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 22px;
+            text-align: left;
+        }
+        .prices-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .logo-placeholder img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+            margin-left: 12px;
+        }
+        .prices-box {
+            background-color: #E6E6FA; /* lavender */
+            color: #000000;
+            padding: 18px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        .prices-box .prices-list {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+        }
+        .prices-box .prices-list li {
+            margin-bottom: 10px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.12);
+        }
+        .prices-box .prices-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        @media (max-width: 900px) {
+            .prices-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo-placeholder img {
+                width: 250px;
+                height: 250px;
+            }
+            .prices-banner { text-align: center; }
+        }
+        /* Difference box */
+        .difference-box {
+            background-color: #E6E6FA; /* lavender */
+            color: #000000;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 18px;
+            border-radius: 8px;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 60px;
+            margin-top: 18px;
+        }
+        .footer a {
+            display: inline-block;
+            text-decoration: underline;
+            background-color: transparent;
+            color: #0000EE; /* link-blue */
+            font-weight: 800;
+            font-size: 20px;
+            padding: 8px 14px;
+            border-radius: 5px;
+            margin: 0 12px;
+        }
+        .footer button {
+            padding: 10px 20px;
+            background-color: silver;
+            color: #01796f;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Comic Neue', sans-serif;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="banner-background"></div>
+
+        <div class="banner-left">
+            <a href="/" title="Home">
+                <img src="https://i.imgur.com/HP1NKSd.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="banner-center">
+            <h1>Silverlining Airlines</h1>
+        </div>
+
+        <div class="banner-right">
+            <button class="book-now" onclick="window.location.href='#'">Book now!</button>
+            <div class="secondary-buttons">
+                <a href="services-html.html">Services</a>
+                <a href="contact-page.html">Contact</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="about_us.html">About Us</a>
+                <a href="https://docs.google.com/document/d/1doy58_AW74HvI74i4YPN_XUv81uBfNrL1Gfhli7z7yk/edit?tab=t.0" id="image-credits">Image credits</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="box promise">
+            <h2>Our Business:</h2>
+            <p>Here at Silverlining Airlines, our #1 Goal is to get you where you need to go, safely and on time. From the deep blue Atlantic sea to the pacific ocean out in the wild west. we have many flights that you may need, want for your vacation, or even find interesting we WILL not include hidden fees, unnecesary addon fees, no charges for extra bags, seat selection or basic food and water needs, what you see during booking is what you PAY for.</p>
+        </div>
+        <div class="box who-we-serve">
+            <h2>Who We Serve:</h2>
+            <p>We serve all travelers, from families and vactioners to lone travelers and couples heading to our many destinations like Las Vegas. we serve passengers who want alternative to budget and overpriced airlines, our main hub is in the Detroit Metro Airport, whilst we fly to and back from places like Las Vegas and Washington D.C, two of the most major airports in the country, we know a lot of our passengers live in Michigan but tend to travel to Las Vegas for Vacation or Washington D.C for business and Law.</p>
+        </div>
+    </div>
+
+    
+    <div class="difference-box">
+        <h2>Why we are different from other airlines</h2>
+        <p>Since 2021 Airline prices have been skyrocketing due to the increasing inflation, airlines want more and more every single year. but not SilverLining Airlines. now that it is the 2040s, we believe it is time to lower prices, for YOU, most airlines only see the money, but here at silverlining airlines, our pilots love to fly our passengers from destination to destination, and we want everyone to be able to fly at an affordable price, but not just that, we are way cheaper and more luxurious, most airlines would charge you for WIFI, but not us, we provide free WIFI in flight, because EVERYTHING is included in your ticket. Food, Drinks, WIFI, your bags, Other airlines charge for additional or overweight bags, we don't. our CEO who founded SilverLining airlines has always loved flying but it was always too expensive for him when he was younger, and he doesn't want other people who love to fly have the same experience that he and millions of others like him did in the 2020s.</p>
+    </div>
+
+    
+    <div class="service-section">
+        <div class="box service-image">
+            <h2>Our Service</h2>
+            <p><b>Photo of our fine A320-NEO!</b></p>
+            <img src="https://i.imgur.com/YNv52L3.png" alt="Service Image Placeholder">
+        </div>
+
+        <div class="box prices-section">
+            <div class="prices-banner">Prices of our flights</div>
+            <div class="prices-content">
+                <div class="logo-placeholder">
+                    <img src="https://i.imgur.com/HP1NKSd.png" alt="Logo Placeholder">
+                </div>
+                <div class="prices-box">
+                    <ul class="prices-list">
+                        <li>Detroit (DTW) → Las Vegas (LAS) — $65 (One Way)</li>
+                        <li>Detroit (DTW) → Las Vegas (LAS) — $130 Roundtrip (Both ways)</li>
+
+                        <li>Detroit (DTW) → Washington D.C. (DCA) — $95 (One Way)</li>
+                        <li>Detroit (DTW) → Washington D.C. (DCA) — $190 Roundtrip (Both ways)</li>
+
+                        <li>Detroit (DTW) → Chicago (ORD) — $80 (One Way)</li>
+                        <li>Detroit (DTW) → Chicago (ORD) — $160 Roundtrip (Both ways)</li>
+
+                        <li>Detroit (DTW) → New York (JFK) — $110 (One Way)</li>
+                        <li>Detroit (DTW) → New York (JFK) — $220 Roundtrip (Both ways)</li>
+
+                        <li>Detroit (DTW) → Orlando (MCO) — $130 (One Way)</li>
+                        <li>Detroit (DTW) → Orlando (MCO) — $260 Roundtrip (Both ways)</li>
+
+                        <li>Detroit (DTW) → Miami (MIA) — $140 (One Way)</li>
+                        <li>Detroit (DTW) → Miami (MIA) — $280 Roundtrip (Both ways)</li>
+                    
+                        <li>Detroit (DTW) → Atlanta (ATL) — $55 One way</li>
+                        <li>Detroit (DTW) → Atlanta (ATL) — $110 Roundtrip (Both ways)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="box business-image">
+            <h2>Our Business</h2>
+            <p><b>Photo of our Headquarters in Detroit, MI.</b></p>
+            <img src="https://i.imgur.com/yo0nkRR.png" alt="Our Headquarters in Detroit, MI">
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="about_us.html">About-us</a>
+        <a href="contact-page.html">Contact</a>
+        <a href="reviews.html">Reviews</a>
+    </div>
+
+</body>
+</html>

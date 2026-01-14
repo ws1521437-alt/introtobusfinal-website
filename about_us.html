@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://i.imgur.com/HP1NKSd.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Neue', sans-serif;
+            background-color: #01796f;
+            color: #000;
+        }
+
+        .banner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 320px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: silver;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 128, 0.7);
+    z-index: 0;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('https://meetmtp.com/wp-content/uploads/2022/03/cover_photo-38.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.banner-left,
+.banner-center,
+.banner-right {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-left img {
+    width: 150px;
+    height: auto;
+    background-color: #c0c0c0;
+    object-fit: contain;
+    position: relative;
+    z-index: 3; 
+}
+
+.banner-center h1 {
+    margin: 0;
+    font-size: 102px;
+    text-align: center;
+    color: rgb(164, 28, 198);
+}
+
+.banner-right a {
+    background-color: silver;
+    color: #01796f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+        .secondary-buttons {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .secondary-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: silver;
+            color: #01796f;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px 0;
+            width: 120px;
+            text-align: center;
+        }
+
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 40px;
+        }
+
+        .top-boxes {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .about-box {
+            background-color: #E6E6FA;
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            text-align: center;
+        }
+
+        .about-box h2 {
+            margin-top: 0;
+        }
+
+        .divider {
+            width: 60%;
+            height: 4px;
+            background-color: #004d40;
+            border-radius: 2px;
+            margin: 15px auto;
+        }
+
+        .about-box p {
+            font-weight: bold;
+        }
+
+    
+        .story-box {
+            background-color: #90ee90; 
+            padding: 35px;
+            border-radius: 15px;
+            width: 75%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .story-box h2 {
+            margin-top: 0;
+        }
+        .footer { text-align: center; padding: 30px 20px 60px; margin-top: 18px; }
+        .footer hr { width: 80%; border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 0 auto 18px; }
+        .footer a { display: inline-block; text-decoration: underline; background-color: transparent; color: #0000EE; font-weight: 800; font-size: 20px; padding: 8px 14px; border-radius: 5px; margin: 0 12px; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="banner-background"></div>
+
+        <div class="banner-left">
+            <img src="https://i.imgur.com/HP1NKSd.png" alt="Logo">
+        </div>
+
+        <div class="banner-center">
+            <h1>About SilverLining Airlines</h1>
+        </div>
+
+         <div class="banner-right">
+            <div class="secondary-buttons">
+                <a href="index.html">Home Page</a>
+                <a href="services-html.html">Services</a>
+                <a href="contact-page.html">Contact</a>
+                <a href="reviews.html">Reviews</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-container">
+
+        <div class="top-boxes">
+            <div class="about-box">
+                <h2>Our Mission</h2>
+                <div class="divider"></div>
+                <p>Here at SilverLining Airlines, we want every single passenger to feel safe and comfortable on every flight. our crew is comitted to serving you for the amount of time you are in the aircraft, if you have any questions or concerns, we are here for you. please don't hesitate to ask one of our crew members for any assistance.</p>
+            </div>
+            <div class="about-box">
+                <h2>Our Future</h2>
+                <div class="divider"></div>
+                <p>Right now as the year 2048 comes to an end, we hope to service more than 10 Million people by 2050, which would be our 3rd Major milestone, the first two being our first Million passengers, and our first 5 million passengers, we also plan on ordering 3 more new aircraft to expand destinations AND begin our first flights to Norway which are planned for 2052, we are working with Airbus on a plan for long haul aircraft like the A350-900 and the A330-300, which is surprisingly a popular destination for passengers like YOU right now!</p>
+            </div>
+        </div>
+
+        <div class="story-box">
+            <h2>Our Story</h2>
+            <div class="divider"></div>
+            <p>Founded in 2042, Silverlining Airlines has grown from a small private transport business to a full public commercial business, our CEO and Founder William E. Sullivan, has always loved Aviation and things to do with the airline and aviation industry, when he was only 3, his parents took him to an Airshow in Auburn Hills, Michigan. since then he has been fascinated with airplanes, and his dream of becoming a pilot may not have become true, BUT his dream of owning his own airline that flies from Detroit to Las Vegas for a great price has been achieved, SilverLining airlines as of December 2046 has Serviced over 6,700,000 passengers and is counting.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <hr>
+        <a href="contact-page.html">Contact</a>
+        <a href="reviews.html">Reviews</a>
+    </div>
+
+</body>
+</html>

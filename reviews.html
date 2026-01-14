@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reviews - SilverLining Airlines</title>
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://i.imgur.com/HP1NKSd.png">
+	<style>
+		body {
+			margin: 0; 
+			font-family: 'Comic Neue', sans-serif; 
+			background-color: #01796f; 
+			color: #c0c0c0; 
+		}
+
+		.banner {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			height: 320px;
+			box-sizing: border-box;
+			color: rgb(164, 28, 198);
+			overflow: hidden;
+		}
+		.banner::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background-color: rgba(0, 0, 128, 0.7);
+			z-index: 0; 
+		}
+		.banner-background {
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background-image: url('https://meetmtp.com/wp-content/uploads/2022/03/cover_photo-38.jpeg');
+			background-size: cover;
+			background-position: center;
+			z-index: -1; 
+		}
+		.banner-left,
+		.banner-center,
+		.banner-right {
+			position: relative;
+			z-index: 2;
+		}
+		.banner-left img {
+			width: 150px;
+			height: auto;
+			max-width: 100%;
+			background-color: #c0c0c0;
+			z-index: 1;
+			position: relative;
+			display: block;
+			object-fit: contain;
+		}
+		.banner-left a { pointer-events: none; cursor: default; }
+		.banner-center h1 { font-size: 102px; text-align: center; margin: 0; z-index: 1; }
+		.banner-right { display: flex; flex-direction: column; justify-content: space-between; height: 100%; align-items: flex-end; z-index: 1; }
+		.book-now { background-color: #2a9dca; color: silver; font-weight: bold; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+		.secondary-buttons { margin-top: auto; display: flex; flex-direction: column; align-items: center; }
+		.secondary-buttons a { display: inline-block; text-decoration: none; background-color: silver; color: #01796f; font-weight: bold; padding: 10px 20px; border-radius: 5px; margin: 5px 0; width: 120px; text-align: center; cursor: pointer; }
+
+		.reviews-section { display: flex; justify-content: center; flex-wrap: wrap; padding: 50px 20px; gap: 30px; }
+		.review-column { background-color: #E6E6FA; color: #000; padding: 20px; border-radius: 10px; border: 3px solid #000; box-sizing: border-box; flex: 1 1 420px; display:flex; flex-direction: column; align-items: center; min-width: 420px; }
+		.review-column img { width: 400px; height: 400px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background-color: #c0c0c0; }
+		.review-column h3 { margin: 0; font-size: 22px; }
+		.review-text { text-align: left; margin-top: 12px; }
+		.review-column .response { margin-top: 12px; width: 100%; background-color: rgba(0,0,0,0.04); padding: 12px; border-radius: 6px; box-sizing: border-box; }
+		.review-column .response p { margin: 0; }
+
+		.footer { text-align: center; padding: 30px 20px 60px; margin-top: 18px; }
+		.footer hr { width: 80%; border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 0 auto 18px; }
+		.footer a { display: inline-block; text-decoration: underline; background-color: transparent; color: #0000EE; font-weight: 800; font-size: 20px; padding: 8px 14px; border-radius: 5px; margin: 0 12px; }
+
+		@media (max-width: 900px) {
+			.banner-center h1 { font-size: 48px; }
+			.secondary-buttons a { width: 120px; }
+			.review-column { flex: 1 1 260px; min-width: 260px; }
+			.review-column img { width: 250px; height: 250px; }
+		}
+	</style>
+</head>
+<body>
+
+	<div class="banner">
+		<div class="banner-background"></div>
+
+		<div class="banner-left">
+			<a href="/" title="Home"><img src="https://i.imgur.com/HP1NKSd.png" alt="Logo"></a>
+		</div>
+
+		<div class="banner-center">
+			<h1>Silverlining Airlines Reviews</h1>
+		</div>
+
+		<div class="banner-right">
+			<button class="book-now" onclick="window.location.href='#'">Book now!</button>
+			<div class="secondary-buttons">
+				<a href="index.html">Home</a>
+				<a href="services-html.html">Services</a>
+				<a href="contact-page.html">Contact</a>
+				<a href="about_us.html">About Us</a>
+			</div>
+			<p><a href="https://docs.google.com/document/d/1doy58_AW74HvI74i4YPN_XUv81uBfNrL1Gfhli7z7yk/edit?tab=t.0" class="image-credits-link">image credits</a></p>
+		</div>
+	</div>
+
+	<div class="reviews-section">
+		<div class="review-column">
+			<img src="https://i.imgflip.com/2/70fa35.jpg" alt="Mr. Krabs">
+			<h3>Review from Mr. "Karbs"</h3>
+			<p class="review-text">Spingebill... that enthusiastic young fellow, recommended SilverLining Airways assuring me I'd save a few dollars. As the owner of the Krusty Casino, I'm always watching the bottom line.. EVERY bottom line, so I booked a trip to Las Vegas. The fare was surprisingly economical and the service punctual enough for my money. The journey to the mainland had a few small hitches as I'm from Bikini Bottom, but overall I saved money and arrived ready to count the day's money-ay.</p>
+			<div class="response">
+				<p><strong>Response from our CEO William:</strong> Mr. Karbs, we're glad SilverLining helped you keep costs down. We appreciate your business! but please refrain from using our airline services to engage in any questionable activities while traveling. We want a lawful experience for all passengers and wouldn't want disputes arising from illegal casino-related conduct.</p>
+			</div>
+			<p><a href="https://docs.google.com/document/d/1doy58_AW74HvI74i4YPN_XUv81uBfNrL1Gfhli7z7yk/edit?tab=t.0" class="image-credits-link">image credits</a></p>
+		</div>
+
+		<div class="review-column">
+			<img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article/l4NSJs9OLlNDYrDnHX7Qu5OHizlJz6.jpg" alt="Stan Smith">
+			<h3>Review from Stan Smith</h3>
+			<p class="review-text">This is the most amazing airline I have ever been on, its the most American too, and it flies from Detroit to the most American city in the country, Washington D.C! I seriously recommend anyone who's looking for a good and fair flight to our nations capital city, to fly with SilverLining Airlines! the best America has right now!.</p>
+			<div class="response">
+				<p><strong>Response from our CEO William:</strong> Stan Smith, thank you so much for flying with SilverLining Airlines, we are glad you enjoyed flying from Detroit to Washington D.C! and thank you for your kind words about our airline service!</p>
+			</div>
+			<p><a href="https://docs.google.com/document/d/1doy58_AW74HvI74i4YPN_XUv81uBfNrL1Gfhli7z7yk/edit?tab=t.0" class="image-credits-link">image credits</a></p>
+		</div>
+
+		<div class="review-column">
+			<img src="https://i.imgur.com/AW4FAYG.jpeg" alt="John Cena">
+			<h3>Review from John Cena</h3>
+			<p class="review-text">THIS AIRLINE IS SUPER AMAZING, I WAS ABLE TO GET FROM MY EXHIBTION MATCH FROM D.C ALL THE WAY TO LAS VEGAS WITH NO DELAY AND NO HASSLE! PRICES WERE AMAZING! THE PILOTS DID A GREAT JOB LANDING THE PLANE SO SMOOTHLY! AND THE FLIGHT ATTENDANTS WERE VERY KIND AND CARING FOR EVERYONE ABOARD! WOULD RECCOMEND SILVERLINING AIRWAYS TO ALL MY FRIENDS!</p>
+			<div class="response">
+				<p><strong>Response from our CEO William:</strong> Hello, John Cena! it was a pleasure to have the big and bad retired wrestler fly with us! we are so glad you enjoyed your experience with us, and we hope to see you fly with us again soon! we will 100% be telling your flights cabin crew what an amazing job they did!</p>
+			</div>
+			<p><a href="https://docs.google.com/document/d/1doy58_AW74HvI74i4YPN_XUv81uBfNrL1Gfhli7z7yk/edit?tab=t.0" class="image-credits-link">image credits</a></p>
+		</div>
+	</div>
+
+	<div class="footer">
+		<hr>
+		<a href="about_us.html">About-us</a>
+		<a href="contact-page.html">Contact</a>
+	</div>
+
+</body>
+</html>
+*** End Patch
